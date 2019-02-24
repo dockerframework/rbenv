@@ -2,7 +2,7 @@
 
 ### Path Ruby RBENV ###
 export RBENV_ROOT="$HOME/.rbenv"
-export INSTALL_VERSION=${RUBY_VERSION:-2.6.1}
+export INSTALL_VERSION=${RUBY_VERSION:-2.4.5}
 
 git clone https://github.com/rbenv/rbenv.git $RBENV_ROOT
 git clone https://github.com/rbenv/ruby-build.git $RBENV_ROOT/plugins/ruby-build

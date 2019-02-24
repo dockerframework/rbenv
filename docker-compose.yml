@@ -7,12 +7,12 @@ services:
 #================================================================================================
   rbenv:
     restart: unless-stopped
-    container_name: rbenv_${RUBY_VERSION:-2.6.1}
+    container_name: rbenv_${RUBY_VERSION:-2.4.5}
     build:
       context: .
       args:
-        - UBUNTU_VERSION=${UBUNTU_VERSION:-16.04}
-        - RUBY_VERSION=${RUBY_VERSION:-2.6.1}
+        - UBUNTU_VERSION=${UBUNTU_VERSION:-18.04}
+        - RUBY_VERSION=${RUBY_VERSION:-2.4.5}
     ports:
       - "${RBENV_PORT:-225}:22"
     tty: true  
