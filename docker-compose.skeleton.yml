@@ -14,7 +14,7 @@ services:
         - UBUNTU_VERSION=${UBUNTU_VERSION:-16.04}
         - RUBY_VERSION=${RUBY_VERSION:-2.6.1}
     ports:
-      - "${RBENV_PORT:-225}:22"
+      - "${RBENV_PORT:-325}:22"
     tty: true
     volumes:
       - /etc/localtime:/etc/localtime:ro

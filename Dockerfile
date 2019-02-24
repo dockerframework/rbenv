@@ -34,12 +34,16 @@ RUN apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-
       libssl-dev \
       libreadline-dev \
       zlib1g-dev \
+      gnupg \
+      gnupg2 \
       git
 
 COPY rootfs /
 
 RUN chmod +x /tmp/install.sh
 RUN /tmp/install.sh
+
+RUN apt-get -y clean
 
 ONBUILD RUN ["ruby", "/tmp/index.rb"]
 
