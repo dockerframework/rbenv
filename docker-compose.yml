@@ -1,0 +1,20 @@
+version: '3.2'
+
+services:
+
+#================================================================================================
+# RBENV (Ruby Environment)
+#================================================================================================
+  rbenv:
+    restart: unless-stopped
+    container_name: rbenv_${RUBY_VERSION:-2.4.5}
+    build:
+      context: .
+      args:
+        - UBUNTU_VERSION=${UBUNTU_VERSION:-16.04}
+        - RUBY_VERSION=${RUBY_VERSION:-2.4.5}
+    ports:
+      - "${RBENV_PORT:-225}:22"
+    tty: true  
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
