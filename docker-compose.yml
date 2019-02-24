@@ -11,7 +11,7 @@ services:
     build:
       context: .
       args:
-        - UBUNTU_VERSION=${UBUNTU_VERSION:-16.04}
+        - UBUNTU_VERSION=${UBUNTU_VERSION:-18.04}
         - RUBY_VERSION=${RUBY_VERSION:-2.5.3}
     ports:
       - "${RBENV_PORT:-225}:22"
